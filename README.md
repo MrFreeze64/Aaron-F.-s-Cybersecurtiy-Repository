@@ -11,4 +11,4 @@ The first step of this Journey was to get the necessary Software (and a cup of c
 ![Google](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Microsoft_Azure.svg/1200px-Microsoft_Azure.svg.png)
 #  FINDING A CLOUD (Finding a Webservice that hosts the cloud)
 For this assignemt, I used Microsoft Azure, I am not familiar with AWS but it should be useable to complete the assignment. You will need to create an Azure Subscription or AWS to proceed beyond this step. For this assignment i was given $200 in credit by the class, but if you cannot get a credit you will need to create an account and purchase the credit approprite for the work you want to complete 
-![Google](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Microsoft_Azure.svg/1200px-Microsoft_Azure.svg.png)
+![Google](https://www.google.com/url?sa=i&url=https%3A%2F%2Fazure.microsoft.com%2Fen-us%2F&psig=AOvVaw3AXTNkC7mIsFBkbtehUhTS&ust=1653332601942000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCODch4Tm8_cCFQAAAAAdAAAAABAD)

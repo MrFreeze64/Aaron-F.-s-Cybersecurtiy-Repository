@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# These ports are set to accomodate /etc/hosts mappings
+start_dvwa () {
+  docker run -d -p 8001:80 infoslack/dvwa
+  echo "DVWA running on localhost:8001."
+  echo "Navigate to http://dvwa.com to start hacking."
+}
+
+start_hackazon () {
+  docker run -d -p 8002:80 mdeous/hackazon
+  echo "Hackazon running on localhost:8002"
+  echo "Navigate to http://hackazon.com to start hacking."
+}
+
+alias viewmd='typora-alanzanattadev'

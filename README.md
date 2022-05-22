@@ -8,6 +8,7 @@ The Files (Minus the Linux Files) were Files that I created in Class and During 
 # A JOURNEY OF 1000 MILES STARTS WITH A SINGLE STEP (Prepping)
 The first step of this Journey was to get the necessary Software (and a cup of coffee).  For this assignment I used a windows PC, there are some differences but please keep that in mind.  To do this I downloaded Gitbash https://gitforwindows.org/.  Once you naviaget to the site, download it to the computer, altrnatively you can use a computer terminal like windows as well.  While this is not shown in the diagram above, it is needed to Connect to your virtual machines once they are created.
 
+![Google](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Microsoft_Azure.svg/1200px-Microsoft_Azure.svg.png)
 #  FINDING A CLOUD (Finding a Webservice that hosts the cloud)
 For this assignemt, I used Microsoft Azure, I am not familiar with AWS but it should be useable to complete the assignment. You will need to create an Azure Subscription or AWS to proceed beyond this step. For this assignment i was given $200 in credit by the class, but if you cannot get a credit you will need to create an account and purchase the credit approprite for the work you want to complete 
 ![Google](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Microsoft_Azure.svg/1200px-Microsoft_Azure.svg.png)

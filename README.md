@@ -79,7 +79,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-(![image](https://user-images.githubusercontent.com/97210115/169726394-38ee123a-5935-407a-9035-c2fc2b7a6116.png)
+![image](https://user-images.githubusercontent.com/97210115/169726394-38ee123a-5935-407a-9035-c2fc2b7a6116.png)
 
 
 ### Target Machines & Beats
@@ -96,7 +96,7 @@ MetricBeat
 Filebeat
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: MetricBeat: collects data from a Vm or a service. If you use it with Elastic Search, Logstash and Kibana, you can monitor data of the systems.  It provides graphs and charts of information collects and can put it in a readable form.
+ MetricBeat: collects data from a Vm or a service. If you use it with Elastic Search, Logstash and Kibana, you can monitor data of the systems.  It provides graphs and charts of information collects and can put it in a readable form.
 FileBeat: file beat allows you to collect logs and files and provides you with an easier way to store the files than to have massive servers on site. It can also be monitored in Kibana for an easier way to observe and monitor data 
 
 ### Using the Playbook
@@ -108,16 +108,15 @@ SSH into the control node and follow the steps below:
 
 - Run the playbook, and navigate to __kibana___ to check that the installation worked as expected. In my case I would use the Elkserver IP: (Elk_VM IP:5601)
 
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_ 
    The YML files for Elk_Vm were install-elk.yml, and pentest.yml
 These files were copied to /etc/ansible
 
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
 - to run the ansible playbook on a specific machine you need to add it through the nano ‘hosts’ file. To set the filebeats you set the location via the filebeat-config.yml. 
 
-- _Which URL do you navigate to in order to check that the ELK server is running? KIBANA (ELK_VM IP:5601)
-
+- _Which URL do you navigate to in order to check that the ELK server is running? KIBANA 
+- (ELK_VM IP:5601)
+![Elk-VM:5601 Kibana](![kibana](https://user-images.githubusercontent.com/97210115/169726822-83a683dd-ee75-413b-a2f8-8bea4abbb68b.PNG))
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
 
 For this assignment, we were able to download a YML file $ sudo apt-get install python-yaml, then downloaded the file from gitlab. With YML we can create a yml by using the command nano <name_of_file>.yml this will allow you to make a playbook.  once in you need to include --- to start the file, next you format the files you use a – to separate the commands, once done you run the comman ansible-playbook<name_of_file> and it will verify everything in the file.

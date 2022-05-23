@@ -29,10 +29,10 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load Balancers are a type of reverse proxy, or In other words it distributes a network or application's traffic across servers. In addition it Runs on layers 4 (Transport) and 7 (Application) of the OSI Model, running on the Application layer it can Run HTTP requests and on the Transport layer it can run IP and TCP Requests  This is a useful device as it can prevent traffic jams on a server, by sending traffic to other servers, it can keep the performance running.  In a big company, Load Balancers are an absolute must, with hundreds, thousands, tens of thousands or more clients coming through their server, they need to run multiple servers to prevent slow performance or crashes.  In addition to this they are very good at protection from Denial-of-Service (DOS) attacks, where an attacker will send an overwhelming amount of traffic that will not only slow down a server but possibly crash it and make it impossible to access it.  In addition to the load balancer preventing a denial of service attack it is useful to use a jumpbox
+Load Balancers are a type of reverse proxy, or In other words it distributes a network or application's traffic across servers. In addition it Runs on layers 4 (Transport) and 7 (Application) of the OSI Model, running on the Application layer it can Run HTTP requests and on the Transport layer it can run IP and TCP Requests  This is a useful device as it can prevent traffic jams on a server, by sending traffic to other servers, it can keep the performance running.  In a big company, Load Balancers are an absolute must, with hundreds, thousands, tens of thousands or more clients coming through their server, they need to run multiple servers to prevent slow performance or crashes.  In addition to this they are very good at protection from Denial-of-Service (DOS) attacks, where an attacker will send an overwhelming amount of traffic that will not only slow down a server but possibly crash it and make it impossible to access it.  In addition to the load balancer preventing a denial of service attack it is useful to use a jumpbox with a load balancer becuase with a jumpbox, you have to have a specfic IP from a machine to get into the jumpbox, meaning that the only way an attacker would be able to get in would be to steal the computer, ot grab the creditentials off the computer, making it harder for them to access the VM's.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the __data___ and system _logs_.
-
+An Elk Server is a server that is an acroynm for Elasticsearch, Logstash and Kibana, they are 3 different programs that were developed at different times starting with elasticsearch, it was a search engine developed with Java, it was a free and open source search engine that released in 2010.  It was used tools for collecting and storing data and it was a more lightweight tool than having massive servers.  However while it worked well it was then realised it would need more additions so Logstash and Kibana were dseigned too, they are used to help streamline Elasticsearch and make saving logs easier, in addition with these tools and logging of files it was easier to automate the whole process to save time and resources. In addition to Kibana there were filebeats and metricbeat, filebeats was a way to keep track of changes to the logs while metricbeat allowed you to take metrics of the servers and use them in a meaningful way to monitor servers.
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
@@ -67,11 +67,10 @@ A summary of the access policies in place can be found in the table below.
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible? 
-The main advantage of automating a configuration with Ansible, is that it allows you to automate the process of systems, instead of logging into 50 different systems, it allows you to connect to all machines through one agent
+
+There are several advantages to using ansible, first, it is relatively easy to read, you don't need to have massive experience to read and with tasks chronologically running it makes the deployment and use of ansible benefitial. Next, they are powerful, ansible is a very useful tool in automating the process of updating or running servers, the reason is you can write up code to automate tasks and make it so you don't have to log into 50+ computers and running these commands indivdually it can run it for you.  Lastly with SSH as the archtecture, there is not a middle man program that needs to be updated (which is a real pain when you need the system) and in addition to not needing updates its more difficult to exploit the system
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
 1. Install Docker: Docker containers are used to connect to the server
 2. Install Pip3: used to install additional items in docker
 3. Docker Mods: used pip3 to install docker modules, uses python
@@ -80,14 +79,15 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
+![Docker ps img.png](![image](https://user-images.githubusercontent.com/97210115/169726394-38ee123a-5935-407a-9035-c2fc2b7a6116.png)
+
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-10.0.0.5
-10.0.0.6   
-10.0.0.7            
-10.1.0.4            
+10.0.0.5 (RedWeb-1)
+10.0.0.6 (RedWeb-2) 
+10.0.0.7 (RedWeb-3)           
+10.1.0.4 (Elk-VM)         
 
 
 We have installed the following Beats on these machines:

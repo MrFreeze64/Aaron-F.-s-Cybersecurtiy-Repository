@@ -116,7 +116,8 @@ These files were copied to /etc/ansible
 
 - _Which URL do you navigate to in order to check that the ELK server is running? KIBANA 
 - (ELK_VM IP:5601)
-![Elk-VM:5601 Kibana](![kibana](https://user-images.githubusercontent.com/97210115/169726822-83a683dd-ee75-413b-a2f8-8bea4abbb68b.PNG))
+
+(![kibana](https://user-images.githubusercontent.com/97210115/169726822-83a683dd-ee75-413b-a2f8-8bea4abbb68b.PNG))
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
 
 For this assignment, we were able to download a YML file $ sudo apt-get install python-yaml, then downloaded the file from gitlab. With YML we can create a yml by using the command nano <name_of_file>.yml this will allow you to make a playbook.  once in you need to include --- to start the file, next you format the files you use a – to separate the commands, once done you run the comman ansible-playbook<name_of_file> and it will verify everything in the file.

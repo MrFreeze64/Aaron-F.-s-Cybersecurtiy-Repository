@@ -29,12 +29,10 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly _redundant__, in addition to restricting _traffic___ to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box? Protects Servers from Dos Attackers. The advantage of a jumpbox is it is more secure and limits access to resocurces
+Load Balancers are a type of reverse proxy, or In other words it distributes a network or application's traffic across servers. In addition it Runs on layers 4 (Transport) and 7 (Application) of the OSI Model, running on the Application layer it can Run HTTP requests and on the Transport layer it can run IP and TCP Requests  This is a useful device as it can prevent traffic jams on a server, by sending traffic to other servers, it can keep the performance running.  In a big company, Load Balancers are an absolute must, with hundreds, thousands, tens of thousands or more clients coming through their server, they need to run multiple servers to prevent slow performance or crashes.  In addition to this they are very good at protection from Denial-of-Service (DOS) attacks, where an attacker will send an overwhelming amount of traffic that will not only slow down a server but possibly crash it and make it impossible to access it.  In addition to the load balancer preventing a denial of service attack it is useful to use a jumpbox
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the __data___ and system _logs_.
-- _TODO: What does Filebeat watch for?_ changes in the log files
-- _TODO: What does Metricbeat record?_ metricbeat records metrics and stats of the system
+
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
